@@ -7,7 +7,7 @@
      <link rel="icon" href="/img/favicon.gif" type="image/x-icon" />
      <link rel="stylesheet" href="/js/jquery/ui/themes/base/jquery.ui.all.css" 
            type="text/css" media="all" />
-     <title>Аренда недвиживости в Днепропетровске</title>
+     <title>Аренда недвижимости в Днепропетровске</title>
      <script src="/js/jquery/jquery-core.js"></script>
      <script src="/js/jquery/ui/ui/jquery-ui-1.8.14.custom.js"></script>
      <script>
