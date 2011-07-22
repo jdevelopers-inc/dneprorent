@@ -7,7 +7,7 @@
      <link rel="icon" href="/img/favicon.gif" type="image/x-icon" />
      <link rel="stylesheet" href="/js/jquery/ui/themes/base/jquery.ui.all.css" 
            type="text/css" media="all" />
-     <title>Аренда недвижимости в Днепропетровске1</title>
+     <title>Аренда недвижимости в Днепропетровске</title>
      <script src="/js/jquery/jquery-core.js"></script>
      <script src="/js/jquery/ui/ui/jquery-ui-1.8.14.custom.js"></script>
      <script>
@@ -20,7 +20,7 @@
 <body>
   <div class="ui-widget">
     <div class="ui-widget-header ui-corner-top">    
-     <span style="font-size: 16pt;">&nbsp;&nbsp;&nbsp;Аренда недвиживости в Днепропетровске</span>
+     <span style="font-size: 16pt;">&nbsp;&nbsp;&nbsp;Аренда недвижимости в Днепропетровске</span>
     </div> 
     <div class="ui-widget-content">
 		 <div id="tabs">
