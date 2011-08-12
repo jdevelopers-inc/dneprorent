@@ -1,0 +1,31 @@
+
+.error {
+color: #ff0000;
+font-weight: bold;
+}
+
+ul#icons li {
+		cursor: pointer;
+		float: left;
+		list-style: none outside none;
+		margin: 2px;
+		padding: 4px;
+		position: relative;
+	}
+	
+.table {
+	display:table-cell;
+}
+
+.table .tr, .table .td { position: relative;}
+
+.vmiddle {vertical-align:middle;}
+.vbottom {vertical-align:bottom;}
+
+/* fix for ie6 */
+.vbottom .tr, .vbottom .td {  //top: 100%; width: 100%;}
+.vbottom .td {//top: -100%;}
+
+/* fix for ie6 */
+.vmiddle .tr, .vmiddle .td {  //top: 50%; width: 100%;}
+.vmiddle .td {//top: -50%;}	

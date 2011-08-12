@@ -1,0 +1,29 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+        
+<!--  Прежде чем писать классы с аннотациями @Controller и @RequestMapping 
+мы должны активировать фьючер Spring component scanning для пакета, в котором
+будут наши классы -->     
+<context:component-scan base-package="inc.jdevelopers.web" />   
+
+<!-- Аннотации @RequestMapping биндят URL-запросы на соответствующие контроллеры. 
+Поэтому нужны дополнительные statements в web application context. Следующие
+инстансы работают с анотациями @RequestMapping на уровне класса и на уровне метода -->
+<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"></bean>
+<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"></bean>
+
+<!-- Настроим view resolver по-умолчанию -->
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<property name="prefix" value="/WEB-INF/jsp/"/>
+	<property name="suffix" value=".jsp"/>	
+</bean>
+
+<!-- сервис для управления объявлениями (autowired в контроллер MainPageController) -->
+<bean id="promosService" class="inc.jdevelopers.service.RentPromoServiceImpl"></bean>
+
+</beans>
