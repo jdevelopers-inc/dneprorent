@@ -1,8 +1,11 @@
 package inc.jdevelopers.domain;
 
 import javax.jdo.annotations.*;
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import org.apache.bval.constraints.NotEmpty;
 
 import com.google.appengine.api.datastore.Key;
 
@@ -95,9 +98,7 @@ public class RentPromo {
 	//тип аренды
 	private String rentType;
 	
-	@Persistent
-	@NotNull
-	@Size(min=5,message="ошибка дружище:(")
+	@Persistent	
 	//примечание
 	private String comment;
 	

@@ -16,14 +16,31 @@
      <script src="/js/main.js"></script>      
   </head>
 <body>
-   <div id="container" style="margin: 2%;">
-	  <div class="ui-widget"> 
-	    <div class="ui-widget-header ui-corner-top"> 
-	       <center>Аренда недвижимости в Днепропетровске</center> 
-	    </div> 
-	      <div class="ui-widget-content ui-corner-all " style="height: 600px;">
-			    <div style="background-color: yellow;">	       
-			         <a href="/">Главная</a>&nbsp;|&nbsp;
-			         <a href="/input">Ввод данных</a>&nbsp;|&nbsp;	  
-			         <a href="/view">Просмотр</a>    
-			    </div>
+
+
+<div class="ui-widget ui-helper-clearfix header">
+      <img align="left" src="/img/header-img.jpg" >
+      <div>
+        <font style="vertical-align: middle; color: white; font-size: 15pt; 
+            font-family: Arial; font-weight: bold;">Аренда недвижимости в Днепропетровске
+        </font>
+      </div>
+            <font style="font-size: 8pt;">Пользователь:</font> 
+               <input style="width: 100px;" class="ui-corner-all">
+            <font style="font-size: 8pt;">Пароль:</font> 
+               <input style="width: 100px;" type="password" class="ui-corner-all">
+            <input type="button" class="fg-button ui-state-default ui-corner-all" value="Войти">
+            <br/><font style="font-size: 9pt;"><a href="">Забыли пароль</a>?&nbsp;<a href="">Регистрация</a></font>            
+</div>
+   
+<div class="container">
+	  <div class="ui-widget content"> 
+	  
+	      <div class="fg-toolbar ui-widget-header ui-helper-clearfix ui-corner-top"> 
+		       <div class="fg-buttonset fg-buttonset-single">
+					<a href="/"><button class="fg-button ui-state-default ui-corner-left">Главная</button></a>
+					<a href="/input"><button class="fg-button ui-state-default ">Добавить объявлениие</button></a>			
+					<a href="/view"><button class="fg-button ui-state-default ui-corner-right">Обзор</button></a>
+					<span style="display: none;">main menu</span>
+				</div> 
+	      </div>

@@ -38,6 +38,7 @@ public class MainPageController {
 	
 	@RequestMapping(value="/",method = RequestMethod.GET)
 	public String welcome(Model model){
+	   model.addAttribute("count", promosService.countPromos());
 	   return "index";
 	}
 	

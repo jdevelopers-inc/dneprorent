@@ -5,6 +5,8 @@
 
 <%@include file="/WEB-INF/jsp/headers/header.jsp"%>  
 
+<div class="ui-widget-content ui-corner-bottom " style="height: 380px; padding: 3px; overflow: auto; text-align: left; ">
+
 <c:forEach items="${promos}" var="promosItem">
   <div style="padding: 3px; 
               spacing: 5px; 
@@ -28,5 +30,5 @@
    </ul>
   </div>
 </c:forEach>
-
+</div>
 <%@include file="/WEB-INF/jsp/footers/footer.jsp"%>

@@ -3,9 +3,9 @@
          session="true" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>         
 <%@ include file="/WEB-INF/jsp/headers/header.jsp"%>   											
-<div>   
 
-<div style="color: lightgray;">Общее число объявлений в системе: ${count}</div>         
+<div class="ui-widget-content ui-corner-bottom " style="height: 410px; padding: 3px;">  
+        
 <form:form method="post" modelAttribute="rentPromo">
 <fieldset style="border-style: dashed; border-color: lightgray; border-width: 1px;">  
     <legend style="font-weight:  bold; ">Адрес</legend> 
