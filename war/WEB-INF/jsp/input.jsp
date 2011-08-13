@@ -4,7 +4,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>         
 <%@ include file="/WEB-INF/jsp/headers/header.jsp"%>   											
 
-<div class="ui-widget-content ui-corner-bottom " style="height: 410px; padding: 3px;">  
+<div class="ui-widget-content ui-corner-bottom " style="height: 430px; padding: 3px;">  
         
 <form:form method="post" modelAttribute="rentPromo">
 <fieldset style="border-style: dashed; border-color: lightgray; border-width: 1px;">  
