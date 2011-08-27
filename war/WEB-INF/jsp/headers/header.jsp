@@ -13,7 +13,9 @@
         
      <script src="/js/jquery/jquery-core.js"></script>
      <script src="/js/jquery/ui/ui/jquery-ui-1.8.14.custom.js"></script>
-     <script src="/js/main.js"></script>      
+     <script src="/js/main.js"></script> 
+     
+     <script type="text/javascript" src="http://api.recaptcha.net/js/recaptcha_ajax.js"></script>     
   </head>
 <body>
 
@@ -41,6 +43,7 @@
 					<a href="/"><button class="fg-button ui-state-default ui-corner-left">Главная</button></a>
 					<a href="/input"><button class="fg-button ui-state-default ">Добавить объявлениие</button></a>			
 					<a href="/view"><button class="fg-button ui-state-default ui-corner-right">Обзор</button></a>
+					<a href="/guestbook"><button class="fg-button ui-state-default ui-corner-right">Отзывы</button></a>
 					<span style="display: none;">main menu</span>
 				</div> 
 	      </div>

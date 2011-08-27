@@ -65,7 +65,8 @@ public class MainPageController {
             String propertyPath = violation.getPropertyPath().toString();
             String message = violation.getMessage();
             // Add JSR-303 errors to BindingResult so Spring can display them in view via a FieldError
-            result.addError(new FieldError("rentPromo", propertyPath, "Invalid " + propertyPath + "(" + message + ")"));
+            //result.addError(new FieldError("rentPromo", propertyPath, "Invalid " + propertyPath + "(" + message + ")"));
+            result.addError(new FieldError("rentPromo", propertyPath,  message));
         }
 
         // Use JSR-303 violations.size() == 0 or standard Spring result.hasErrors() which now has the JSR-303 errors
@@ -99,4 +100,8 @@ public class MainPageController {
 	   return "view";
 	}
 
+	@RequestMapping(value="/guestbook", method = RequestMethod.GET)
+	public String guestbook(Model model){
+	   return "guestbook";
+	}
 }

@@ -103,6 +103,7 @@ public class RentPromo {
 	private String comment;
 	
 	@Persistent
+	@NotEmpty(message="Обязательное поле")
 	//метка
 	private String tag;
 
