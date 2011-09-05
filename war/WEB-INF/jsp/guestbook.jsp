@@ -5,7 +5,7 @@
 
 <%@include file="/WEB-INF/jsp/headers/header.jsp"%>  
 
-<div class="ui-widget-content ui-corner-bottom " style="height: 380px; padding: 3px; overflow: auto; text-align: left; ">
+<div class="ui-widget-content ui-corner-bottom " style="height: 380px; padding: 10px; overflow: auto; text-align: left; ">
 
 <script type="text/javascript">
 	      var PUBLIC_KEY = "6LdSh8cSAAAAAL9RBSsg17DDL-tvoPCM-pgp8a9_",
@@ -16,7 +16,7 @@
 	      
 	      function showRecaptcha() {
 		  Recaptcha.create(PUBLIC_KEY, "dynamic_recaptcha_1", {
-			theme: "white",
+			theme: "black",
 			lang: "ru",
 			callback: Recaptcha.focus_response_field
 		  });
@@ -56,22 +56,25 @@
 		      }
 		  }
 	      }
+	      
+	      $(document).ready(function(){
+	    	  PreloadCaptcha();
+	      });
 </script>
-<img src="/img/guestbook.jpg" align="right">
 <p>&nbsp;&nbsp;&nbsp;&nbsp;<b>Уважаемые посетители</b>, в этом разделе прошу оставлять свои мнения, пожелания, предложения и отзывы.
-</p><br/>
-<!-- div style="width: auto; border-width: 1px; border-style: dashed; border-color: grey; " -->
-<form action="/sign" method="post">
-    <table border="0" cellspacing="1" cellpadding="1">
-      <tr><td>Имя: <input name="user" type="text"></td></tr>
-      <tr><td>Обратная связь (контакты): <input name="callback" type="text"></td></tr>
-      <tr><td><textarea name="content" rows="3" cols="50"></textarea></td></tr>
-      <tr><td><div id="dynamic_recaptcha_1"></div></td></tr>
-      <tr><td><input type="submit" value="Оставить отзыв" /></td></tr>
-    </table>
+</p>
+
+<form action="/guestbook" method="post">
+  
+      Имя: <input name="user" type="text"/>&nbsp;&nbsp;
+      Обратная связь (контакты): <input name="callback" type="text"/>
+      <textarea name="content" rows="2" cols="50"></textarea>
+      <div id="dynamic_recaptcha_1"></div>
+      <input type="submit" value="Оставить отзыв" />
+   
 </form>
-<!-- /div -->
-<br/><hr/>
+
+<hr/>
 <!-- вывод всех отзывов -->
 </div>
 <%@include file="/WEB-INF/jsp/footers/footer.jsp"%>

@@ -1,10 +1,14 @@
 package inc.jdevelopers.web;
 
+import java.util.Date;
 import java.util.Set;
 
 import inc.jdevelopers.domain.*;
 import inc.jdevelopers.domain.util.RentType;
 import inc.jdevelopers.service.RentPromoServiceImpl;
+
+import net.tanesha.recaptcha.ReCaptchaImpl;
+import net.tanesha.recaptcha.ReCaptchaResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,6 +20,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import org.springframework.ui.Model;
 
+import javax.jdo.PersistenceManager;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
@@ -102,6 +109,38 @@ public class MainPageController {
 
 	@RequestMapping(value="/guestbook", method = RequestMethod.GET)
 	public String guestbook(Model model){
+	   return "guestbook";
+	}
+	
+	@RequestMapping(value="/guestbook", method = RequestMethod.POST)
+	public String saveOpinion(Model model, HttpServletRequest req, HttpServletResponse resp){
+		String challenge = req.getParameter("recaptcha_challenge_field"),
+	           response = req.getParameter("recaptcha_response_field");
+		
+		try
+	    {
+	      if ((challenge == null) || (response == null)) {
+	        System.out.println("Фак!!! Каптча не рулит совсем!");//resp.sendRedirect("/?p=&err=1");
+	      }
+
+	      String remoteAddr = req.getRemoteAddr();
+	      ReCaptchaImpl reCaptcha = new ReCaptchaImpl();
+	      reCaptcha.setPrivateKey("6LdSh8cSAAAAADfAz1B4lYIz6FAQmOESBpcfNS2h ");
+	      ReCaptchaResponse reCaptchaResponse = reCaptcha.checkAnswer(remoteAddr, challenge, response);
+
+	      if (!reCaptchaResponse.isValid())
+	      {
+	    	  System.out.println("Фак!!! Каптча не валидная!");//resp.sendRedirect("/?p=&err=1");
+	      }
+	      else {
+	    	  System.out.println("О чудо!");
+	    	  //сохраняем отзыв
+	      }
+	    }
+	    catch (Exception ex){
+	      ex.printStackTrace();
+	    }
+	  
 	   return "guestbook";
 	}
 }

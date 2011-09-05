@@ -32,5 +32,6 @@
 	<classpathentry kind="lib" path="war/WEB-INF/lib/org.springframework.web.struts-3.0.5.RELEASE.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/slf4j-api-1.6.1.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/validation-api-1.0.0.GA.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/recaptcha4j-0.0.7.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
